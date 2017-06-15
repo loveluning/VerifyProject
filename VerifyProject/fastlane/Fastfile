@@ -30,7 +30,7 @@ platform :ios do
   lane :config_generate do |options|
     echo options[:param]
     param = options[:param]
-    sh "echo #{param} > ../Config/Config"
+    sh "echo #{param} > ./Config/Config"
   end
 
   desc "配置Podfile"
