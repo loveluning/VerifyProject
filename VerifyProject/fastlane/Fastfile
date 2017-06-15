@@ -30,7 +30,7 @@ platform :ios do
   lane :config_generate do |options|
     # 这里我们以简单的直接传递参数为例
     echo options[:param]
-    param = options[:param] ? options[:param] : 'A,B,C'
+    param = options[:param] ? options[:param] : 'A,B'
     sh "echo #{param} > ../Config/Config"
   end
 
