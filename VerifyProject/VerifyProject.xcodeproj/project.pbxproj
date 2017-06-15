@@ -137,6 +137,7 @@
 				TargetAttributes = {
 					65F3059E1EF21D9A009DD9BC = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = BQV28D859C;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -348,9 +349,10 @@
 			baseConfigurationReference = A89E42026EB5DB00B905AF6A /* Pods-VerifyProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BQV28D859C;
 				INFOPLIST_FILE = VerifyProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ln.helloar.VerifyProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ln.helloar.VerifyProject1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -360,9 +362,10 @@
 			baseConfigurationReference = 364A72669D76F0AA91E5CF8A /* Pods-VerifyProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = BQV28D859C;
 				INFOPLIST_FILE = VerifyProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ln.helloar.VerifyProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ln.helloar.VerifyProject1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -386,6 +389,7 @@
 				65F305B81EF21D9A009DD9BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
