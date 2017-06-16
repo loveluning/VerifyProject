@@ -1,0 +1,9 @@
+source 'https://gems.ruby-china.org/'
+
+gem 'fastlane', '2.35.1'
+gem 'slather'
+gem 'gym'
+gem 'xcov'
+gem 'cocoapods', '1.2.1'
+gem 'xcpretty'
+gem 'dotenv'

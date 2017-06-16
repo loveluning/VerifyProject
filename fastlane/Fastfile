@@ -1,0 +1,73 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.38.1"
+require './Fastfunc.rb'
+fastlane_require 'dotenv'
+Dotenv.load('App.env')
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+
+    bundle_install
+
+  end
+
+  desc "生成配置文件"
+  desc "Usage: bundle exec fastlane ios config_generate param:[数据/URL等]"
+  lane :config_generate do |options|
+    echo options[:param]
+    param = options[:param]
+    sh "echo #{param} > ./Config/Config"
+  end
+
+  desc "配置Podfile"
+  desc "Usage: bundle exec fastlane ios config_pod"
+  lane :config_pod do
+    sh 'pwd'
+    sh 'sh ./config_pod.sh'
+    cocoapods
+  end
+
+  desc "构建项目"
+  desc "Usage： bundle exec fastlane ios build config:[Debug/Release]"
+  lane :build do |options|
+    config = options[:config] ? options[:config] : 'Debug'
+    build_ipa config
+  end
+
+  desc "部署到蒲公英"
+  desc "Usage: bundle exec fastlane ios deploy config:[Debug/Release]"
+  lane :deploy do |options|
+    config = options[:config] ? options[:config] : 'Debug'
+    user_key = ENV['FL_PGYER_USER_KEY']
+    api_key = ENV['FL_PGYER_API_KEY']
+    deploy_to_pgyer config, user_key, api_key
+  end
+
+  after_all do |lane|
+  end
+
+  error do |lane, exception|
+  end
+
+end
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used. No personal data is recorded.
+# Learn more at https://github.com/fastlane/fastlane#metrics
