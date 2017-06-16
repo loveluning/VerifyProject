@@ -137,8 +137,8 @@
 				TargetAttributes = {
 					65F3059E1EF21D9A009DD9BC = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = BQV28D859C;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 64W9TX8T3A;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -349,11 +349,14 @@
 			baseConfigurationReference = A89E42026EB5DB00B905AF6A /* Pods-VerifyProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BQV28D859C;
+				CODE_SIGN_IDENTITY = "iPhone Developer: linfeng huang (MG2LSV5WMU)";
+				DEVELOPMENT_TEAM = 64W9TX8T3A;
 				INFOPLIST_FILE = VerifyProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ln.helloar.VerifyProject1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Shikee.ShikeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d44e195d-a67d-4c66-9d24-1635f8a78a9f";
+				PROVISIONING_PROFILE_SPECIFIER = shikeDev;
 			};
 			name = Debug;
 		};
@@ -362,11 +365,14 @@
 			baseConfigurationReference = 364A72669D76F0AA91E5CF8A /* Pods-VerifyProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BQV28D859C;
+				CODE_SIGN_IDENTITY = "iPhone Developer: linfeng huang (MG2LSV5WMU)";
+				DEVELOPMENT_TEAM = 64W9TX8T3A;
 				INFOPLIST_FILE = VerifyProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ln.helloar.VerifyProject1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Shikee.ShikeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d44e195d-a67d-4c66-9d24-1635f8a78a9f";
+				PROVISIONING_PROFILE_SPECIFIER = shikeDev;
 			};
 			name = Release;
 		};
